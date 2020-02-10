@@ -8,6 +8,7 @@ const useStyles = makeStyles(theme => ({
     backgroundColor: "#eee",
     // padding: "20px 185px",
     borderTop: "5px solid #006A4D",
+    margin:'30px 0',
     height: props => props.height
   },
   container: {
@@ -55,6 +56,8 @@ const useStyles = makeStyles(theme => ({
 export default function AccountSummary(props) {
   const classes = useStyles(props);
 
+  const {accountType, sortCode, accountNumber, accountBalance} = props;
+
   return (
     <div className={classes.grow}>
       <Paper className={classes.wrapper}>
@@ -62,22 +65,22 @@ export default function AccountSummary(props) {
           <Grid item xs={8}>
             <Box className={classes.accountInfo}>
               <Grid container>
-                <Grid item xs={2}>
+                <Grid item xs={5}>
                   <Typography className={classes.accountType}>
-                    Classic
+                    {accountType}
                   </Typography>
                 </Grid>
                 <Grid item xs={2}>
-                  <Typography className={classes.sortCode}>58-49-59</Typography>
+                  <Typography className={classes.sortCode}>{sortCode}</Typography>
                 </Grid>
                 <Grid item xs={3}>
                   <Typography className={classes.accountNumber}>
-                    84758374
+                    {accountNumber}
                   </Typography>
                 </Grid>
               </Grid>
               <Typography className={classes.accountBalance}>
-                £ 2,030,495
+                {accountBalance}
               </Typography>
               <hr/>
             </Box>
