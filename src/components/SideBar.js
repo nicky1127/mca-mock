@@ -29,12 +29,12 @@ export default function WhiteBar(props) {
         <Box className={classes.item}>SAVINGS &amp; INVESTMENTS</Box>
         <Box className={classes.item}>LOANS &amp; CAR FINANCE</Box>
         <Box className={classes.item}>BANK ACCOUNTs</Box>
-        <Box className={classes.item}>SAVINGS INVESTMENTS</Box>
-        <Box className={classes.item}>SAVINGS INVESTMENTS</Box>
-        <Box className={classes.item}>SAVINGS INVESTMENTS</Box>
-        <Box className={classes.item}>SAVINGS INVESTMENTS</Box>
-        <Box className={classes.item}>SAVINGS INVESTMENTS</Box>
-        <Box className={classes.item}>SAVINGS INVESTMENTS</Box>
+        <Box className={classes.item}>UPGRADE BANK ACCOUNT</Box>
+        <Box className={classes.item}>CREDIT CARDS</Box>
+        <Box className={classes.item}>OVERDRAFTS</Box>
+        <Box className={classes.item}>INSURANCE</Box>
+        <Box className={classes.item}>FINANCIAL PLANNING</Box>
+        <Box className={classes.item}>MORTGAGES</Box>
       </Box>
     </div>
   );
