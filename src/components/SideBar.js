@@ -5,7 +5,8 @@ import { Box, Typography, Grid } from "@material-ui/core";
 const useStyles = makeStyles(theme => ({
   container: {
     backgroundColor: props => props.brandScheme.primaryClr,
-    marginRight: "30px"
+    marginRight: "30px",
+    marginTop: "30px"
   },
 
   item: {
