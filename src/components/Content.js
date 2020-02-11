@@ -13,7 +13,7 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-export default function WhiteBar() {
+export default function WhiteBar(props) {
   const classes = useStyles();
 
   const featureBar = "/images/featurebar.png";
@@ -30,9 +30,9 @@ export default function WhiteBar() {
             />
           </Grid>
           <Grid item xs={8}>
-            <AccountSummary className={classes.accountBlock} height='180px' accountType='Class' accountNumber='84736475' sortCode='39-48-92' accountBalance='£ 13,343,456'/>
-            <AccountSummary className={classes.accountBlock} height='180px' accountType='Monthly Saver' accountNumber='38475924' sortCode='39-48-92' accountBalance='£ 343,456'/>
-            <AccountSummary className={classes.accountBlock} height='180px' accountType='Stocks and shares ISA' accountNumber='28374932' sortCode='39-48-92' accountBalance='£ 2,938,456'/>
+            <AccountSummary {...props} className={classes.accountBlock} height='180px' accountType='Class' accountNumber='84736475' sortCode='39-48-92' accountBalance='£ 13,343,456'/>
+            <AccountSummary {...props} className={classes.accountBlock} height='180px' accountType='Monthly Saver' accountNumber='38475924' sortCode='39-48-92' accountBalance='£ 343,456'/>
+            <AccountSummary {...props} className={classes.accountBlock} height='180px' accountType='Stocks and shares ISA' accountNumber='28374932' sortCode='39-48-92' accountBalance='£ 2,938,456'/>
           </Grid>
         </Grid>
       </Paper>

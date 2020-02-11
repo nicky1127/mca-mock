@@ -7,8 +7,8 @@ const useStyles = makeStyles(theme => ({
   wrapper: {
     backgroundColor: "#eee",
     // padding: "20px 185px",
-    borderTop: "5px solid #006A4D",
-    margin:'30px 0',
+    borderTop: props => `5px solid ${props.brandScheme.primaryClr}`,
+    margin: "30px 0",
     height: props => props.height
   },
   container: {
@@ -21,14 +21,14 @@ const useStyles = makeStyles(theme => ({
     height: "100%"
   },
   accountType: {
-    color: "#006A4D",
+    color: props => props.brandScheme.primaryClr,
     fontWeight: "bold"
   },
   sortCode: {},
   accountNumber: {},
   accountBalance: {
-    fontSize: '30px',
-    fontWeight: 'bold'
+    fontSize: "30px",
+    fontWeight: "bold"
   },
   link: {
     boxSizing: "border-box",
@@ -37,13 +37,13 @@ const useStyles = makeStyles(theme => ({
     borderBottom: "1px solid white"
   },
   moreActionLink: {
-    backgroundColor: "#699B10",
+    backgroundColor: props => props.brandScheme.thirdClr,
     height: "25%",
     paddingLeft: "20px"
   },
   linkTitle: {
     lineHeight: "40px",
-    color: "#006A4D",
+    color: props => props.brandScheme.primaryClr,
     fontWeight: "bold"
   },
   moreActionLinkTitle: {
@@ -56,7 +56,7 @@ const useStyles = makeStyles(theme => ({
 export default function AccountSummary(props) {
   const classes = useStyles(props);
 
-  const {accountType, sortCode, accountNumber, accountBalance} = props;
+  const { accountType, sortCode, accountNumber, accountBalance } = props;
 
   return (
     <div className={classes.grow}>
@@ -71,7 +71,9 @@ export default function AccountSummary(props) {
                   </Typography>
                 </Grid>
                 <Grid item xs={2}>
-                  <Typography className={classes.sortCode}>{sortCode}</Typography>
+                  <Typography className={classes.sortCode}>
+                    {sortCode}
+                  </Typography>
                 </Grid>
                 <Grid item xs={3}>
                   <Typography className={classes.accountNumber}>
@@ -82,7 +84,7 @@ export default function AccountSummary(props) {
               <Typography className={classes.accountBalance}>
                 {accountBalance}
               </Typography>
-              <hr/>
+              <hr />
             </Box>
           </Grid>
           <Grid item xs={4}>

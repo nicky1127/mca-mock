@@ -1,14 +1,36 @@
-import React from 'react';
-import GreenBar from './components/GreenBar';
-import WhiteBar from './components/WhiteBar';
-import Content from './components/Content';
+import React, { useState, useEffect } from "react";
+import * as qs from "query-string";
+import GreenBar from "./components/GreenBar";
+import WhiteBar from "./components/WhiteBar";
+import Content from "./components/Content";
 
-function Main() {
+import constants from "./constants";
+
+function Main(props) {
+  const { location } = props;
+  const parsed = qs.parse(location.search);
+  const brandName = parsed.brand;
+
+  const [brandScheme, setBrandScheme] = useState({});
+
+  useEffect(() => selectBrandScheme(brandName), []);
+
+  const selectBrandScheme = brand => {
+    if (brand) {
+      const result = constants.brandSchemes.filter(
+        scheme => scheme.brand === brand
+      );
+      if (result && result.length === 1) setBrandScheme(result[0]);
+    } else {
+      setBrandScheme(constants.brandSchemes[0]);
+    }
+  };
+
   return (
     <div className="Main">
-        <GreenBar/>
-        <WhiteBar/>
-        <Content/>
+      <GreenBar brandScheme={brandScheme} />
+      <WhiteBar parsed={parsed} brandScheme={brandScheme}/>
+      <Content brandScheme={brandScheme} />
     </div>
   );
 }
