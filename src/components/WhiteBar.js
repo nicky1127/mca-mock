@@ -14,8 +14,8 @@ const useStyles = makeStyles(theme => ({
     paddingLeft: 0
   },
   content: {
-    paddingLeft: "140px",
-    paddingRight: "105px",
+    paddingLeft: "280px",
+    paddingRight: "200px",
     height: "50p"
   },
   customer: {

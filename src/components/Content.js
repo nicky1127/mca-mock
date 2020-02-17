@@ -10,7 +10,9 @@ const useStyles = makeStyles(theme => ({
     backgroundColor: "#eee",
     padding: "20px 15% 0 15%"
   },
-  sideBar:{
+  sideBar: {},
+  accountsContainer: {
+    paddingTop: "30px"
   },
   accountBlock: {}
 }));
@@ -32,7 +34,7 @@ export default function WhiteBar(props) {
             /> */}
             <SideBar className={classes.sideBar} {...props} />
           </Grid>
-          <Grid item xs={9}>
+          <Grid item xs={9} className={classes.accountsContainer}>
             <AccountSummary
               {...props}
               className={classes.accountBlock}

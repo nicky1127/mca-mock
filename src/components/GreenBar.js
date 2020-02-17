@@ -14,7 +14,12 @@ const useStyles = makeStyles(theme => ({
     height: "70px"
   },
   gridContainer: {
-    height: "100%"
+    height: "100%",
+    paddingLeft: "200px",
+    paddingRight: "110px"
+  },
+  gridLogo:{
+    height: "100%",
   },
   title:{
     fontSize: '14px',
@@ -39,7 +44,7 @@ export default function GreenBar(props) {
             style={{ width: "80%", height: "100%", display: "block", margin:"0 auto"}}
           /> */}
           <Grid container className={classes.gridContainer}>
-            <Grid item xs={3} className={classes.gridContainer}>
+            <Grid item xs={3} className={classes.gridLogo}>
               <img
                 src={logo}
                 alt="green bar"
@@ -51,13 +56,13 @@ export default function GreenBar(props) {
                 }}
               />
             </Grid>
-            <Grid item xs={5} className={classes.gridContainer}>
+            <Grid item xs={5} >
               <Typography className={classes.title}>Our products and services</Typography>
             </Grid>
-            <Grid item xs={2} className={classes.gridContainer}>
+            <Grid item xs={2} >
               <Typography className={classes.title}>Cookie Policy</Typography>
             </Grid>
-            <Grid item xs={2} className={classes.gridContainer}>
+            <Grid item xs={2}>
               <Typography className={classes.title}>Your Security</Typography>
             </Grid>
           </Grid>
