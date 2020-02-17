@@ -19,7 +19,8 @@ const useStyles = makeStyles(theme => ({
     paddingRight: "110px"
   },
   gridLogo:{
-    height: "100%",
+    paddingTop: "5px",
+    height: "90%"
   },
   title:{
     fontSize: '14px',
