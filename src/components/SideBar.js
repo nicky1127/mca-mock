@@ -5,17 +5,26 @@ import { Box, Typography, Grid } from "@material-ui/core";
 const useStyles = makeStyles(theme => ({
   container: {
     backgroundColor: props => props.brandScheme.primaryClr,
-    marginRight: "30px",
-    marginTop: "30px"
+    marginRight: "20px",
+    marginTop: "40px"
   },
-
-  item: {
-    height: "50px",
+  topItem: {
+    height: "85px",
     fontSize: '15px',
     fontWeight:'bold',
     color: "#fff",
     textAlign: "center",
-    lineHeight: " 50px",
+    lineHeight: " 85px",
+    border: "1px solid #ccc"
+  },
+
+  item: {
+    height: "60px",
+    fontSize: '15px',
+    fontWeight:'bold',
+    color: "#fff",
+    textAlign: "center",
+    lineHeight: " 60px",
     border: "1px solid #ccc"
   }
 }));
@@ -26,6 +35,7 @@ export default function WhiteBar(props) {
   return (
     <div className={classes.grow}>
       <Box className={classes.container}>
+      <Box className={classes.topItem}>OUR PRODUCTS AND SERVICES</Box>
         <Box className={classes.item}>FEATURED</Box>
         <Box className={classes.item}>SAVINGS &amp; INVESTMENTS</Box>
         <Box className={classes.item}>LOANS &amp; CAR FINANCE</Box>

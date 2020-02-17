@@ -8,7 +8,7 @@ import SideBar from "./SideBar";
 const useStyles = makeStyles(theme => ({
   wrapper: {
     backgroundColor: "#eee",
-    padding: "20px 195px 0 185px"
+    padding: "20px 15% 0 15%"
   },
   sideBar:{
   },
@@ -24,7 +24,7 @@ export default function WhiteBar(props) {
     <div className={classes.grow}>
       <Paper className={classes.wrapper}>
         <Grid container>
-          <Grid item xs={4}>
+          <Grid item xs={3}>
             {/* <img
               src={featureBar}
               alt="feature bar"
@@ -32,7 +32,7 @@ export default function WhiteBar(props) {
             /> */}
             <SideBar className={classes.sideBar} {...props} />
           </Grid>
-          <Grid item xs={8}>
+          <Grid item xs={9}>
             <AccountSummary
               {...props}
               className={classes.accountBlock}
