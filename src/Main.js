@@ -26,10 +26,18 @@ function Main(props) {
     }
   };
 
+  const onClickChangeTheme = () => {
+    const num = Math.floor(Math.random() * 4);
+    setBrandScheme(constants.brandSchemes[num]);
+  };
+
   return (
     <div className="Main">
-      <GreenBar brandScheme={brandScheme} />
-      <WhiteBar parsed={parsed} brandScheme={brandScheme}/>
+      <GreenBar
+        brandScheme={brandScheme}
+        onClickChangeTheme={onClickChangeTheme}
+      />
+      <WhiteBar parsed={parsed} brandScheme={brandScheme} />
       <Content brandScheme={brandScheme} />
     </div>
   );

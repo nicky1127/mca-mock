@@ -20,7 +20,6 @@ const useStyles = makeStyles(theme => ({
 export default function WhiteBar(props) {
   const classes = useStyles();
 
-  const featureBar = "/images/featurebar.png";
 
   return (
     <div className={classes.grow}>
