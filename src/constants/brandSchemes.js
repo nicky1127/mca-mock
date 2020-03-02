@@ -12,6 +12,7 @@ const data = [
     brand: 'Lloyds',
     primaryClr: '#006A4D',
     secondaryClr: '#26a69a',
+    thirdClr: "#699B10",
     logo: '/images/lloyds_logo.png'
   },
   {
